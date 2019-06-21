@@ -1,4 +1,4 @@
-import { decorator1 } from 'https://raw.githubusercontent.com/2woongjae/deno-is-coming/master/decorator1.ts';
+import { decorator1 } from 'https://raw.githubusercontent.com/2woongjae/deno-is-coming/master/decorators.ts';
 
 class Welcome2 {
   @decorator1

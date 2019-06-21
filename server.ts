@@ -1,11 +1,12 @@
-import { serve } from "https://deno.land/std@v0.5/http/server.ts";
+import { serve } from 'https://deno.land/std/http/server.ts';
 
 async function main() {
-  const body = new TextEncoder().encode("Hello World\n");
-  for await (const req of serve(":8888")) {
+  const body = new TextEncoder().encode('Hello World\n');
+  const reqs = serve(':8000');
+  for await (const req of reqs) {
+    console.log('req', req.url);
     req.respond({ body });
   }
-  console.log('started');
 }
 
 main();
